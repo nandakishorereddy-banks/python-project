@@ -21,6 +21,27 @@ output = process_data(values)
 print(f"After: values={values}, result={result}, id={id(values)}")
 print(f"Output returned from function: {output}")
 
-result=[output]
-result.append(values)
-print("Final:",result)
+explanation:
+1.values = [10, 20, 30]
+     We use this list to show how a mutable object can be changed inside a function and still affect the outside code
+2.result = 0
+     This variable is used to show how an immutable type behaves when we try to change it in different scopes
+3.original_id = id(values)
+     We store the ID to check later whether the same list object is being modified or a new one is created
+4.def process_data(data, multiplier=2):
+     This function is used to demonstrate how function scope and default arguments work
+5.temp = data
+     This line shows that Python does not create a copy; both variables point to the same list in memory
+6.temp.append(40)
+      We use this to show that modifying a mutable object inside a function also changes it outside
+7.def inner_function():
+      This nested function is used to explain how enclosing (nested) scopes work in Python
+8.values = [100]
+      This line shows variable shadowing, where a local variable hides an outer variable with the same name
+9.nonlocal result
+       We use this so we can update the variable from the enclosing function, not create a new local one
+10.global result
+       result updates the variable from the global scope
+11.result.append(values)
+       This demonstrates that Python allows dynamic typing, and lists can store different types and references.
+
