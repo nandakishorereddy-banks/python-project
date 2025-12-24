@@ -43,5 +43,14 @@ explanation:
 10.global result
        result updates the variable from the global scope
 11.result.append(values)
-       This demonstrates that Python allows dynamic typing, and lists can store different types and references.
+       This demonstrates that Python allows dynamic typing, and lists can store different types and references
 
+conclusion:
+1.Mutability
+       Lists can be modified directly, so changes affect the original object unless a copy is made
+2.Scoping
+        Python uses the LEGB rule, and incorrect use of global or nonlocal causes errors
+3.Dynamic typing
+         A variable can change its data type at runtime
+4.Shadowing 
+        A local variable with the same name hides an outer variable without changing it
